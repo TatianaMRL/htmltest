@@ -1,12 +1,7 @@
 {
-	"applinks":{
-		"apps": [],
-		"details": {
-			"27PWC9542F.csm.pdm.enterprise": {
-				"paths": [
-					"/htmltest/*"
-				]
-			 }
+	"webcredentials":
+		{
+			"apps":["27PWC9542F.csm.pdm.enterprise"]
 		}
-	}
+
 }
