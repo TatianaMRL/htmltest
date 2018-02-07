@@ -18,13 +18,13 @@
 <body>
 Hello World!<br>
 <form>
- 	<label for="pswd">Enter your username: </label>
-    <input type="text" id="usrn">
+ 	<label hidden for="pswd">Enter your username: </label>
+    <input hidden type="text" id="usrn">
     <br>
-    <label for="pswd">Enter your password: </label>
-    <input type="password" id="pswd">
+    <label hidden for="pswd">Enter your password: </label>
+    <input hidden type="password" id="pswd">
     <br>
-    <input type="button" id = "sbmt" value="Submit" onclick="checkPswd();" />
+    <input hidden type="submit" id = "sbmt" value="Submit" onclick="checkPswd();" />
 </form>
 <script type="text/javascript">
     function checkPswd() {
