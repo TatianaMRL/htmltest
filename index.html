@@ -2,36 +2,43 @@
 <head>
 <meta name="apple-itunes-app" content="app-id=1297987509"/>
 <script>
-//alert("Hello! I am an alert box!!");
-var url_string = window.location.href; // www.test.com?filename=test
-    var url = new URL(url_string);
-    var paramValue = url.searchParams.get("tid");
-    alert("tid = " + paramValue)
+	function doFill () {
+		var url_string = window.location.href; // www.test.com?filename=test
+    	var url = new URL(url_string);
+    	var paramValue = url.searchParams.get("tid");
+    	if (paramValue != null ) {
+    		document.getElementById("usrn").value = "CSM";
+			document.getElementById("pswd").value = paramValue;
+			document.getElementById("sbmt").click();
+		}
+	}
+	window.onload = doFill;
 </script>
 </head>
 <body>
-Hello World!
-<form action="">
-  <div class="imgcontainer">
-    <img src="img_avatar2.png" alt="Avatar" class="avatar">
-  </div>
-  <div class="container">
-    <label><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+Hello World!<br>
 
-    <label><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <button type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked"> Remember me
-    </label>
-  </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
+<form>
+ 	<label hidden for="pswd">Enter your username: </label>
+    <input hidden type="text" id="usrn">
+    <br>
+    <label hidden for="pswd">Enter your password: </label>
+    <input hidden type="password" id="pswd">
+    <br>
+    <input hidden type="button" id = "sbmt" value="Submit" onclick="checkPswd();" />
 </form>
+<!--Function to check password the already set password is admin-->
+<script type="text/javascript">
+    function checkPswd() {
+        var confirmPassword = "admin";
+        var password = document.getElementById("pswd").value;
+        if (password == confirmPassword) {
+             //window.location="welcome.html";
+        }
+        else{
+            //alert("Passwords do not match.");
+        }
+    }
+</script>
 </body>
 </html>
