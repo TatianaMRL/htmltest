@@ -8,7 +8,7 @@
     	var paramValue = url.searchParams.get("tid");
     	if (paramValue != null ) {
     		document.getElementById("usrn").value = "CSM";
-    		document.getElementById("usrn").setAttribute("autocomplete" , "off");
+    		document.getElementById("usrn").setAttribute( "autocomplete", "off" ); 
 			document.getElementById("pswd").value = paramValue;
 			document.getElementById("sbmt").click();
 		}
