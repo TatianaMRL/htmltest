@@ -1,50 +1,13 @@
 <html>
 <head>
-<meta name="apple-itunes-app" content="app-id=1297987509"/>
-<script  type="text/javascript">
-	function doFill () {
-		var url_string = window.location.href; // www.test.com?filename=test
-    	var url = new URL(url_string);
-    	var paramValue = url.searchParams.get("tid");
-    	if (paramValue != null ) {
-    		document.getElementById("usrn").value = "CSM";
-			document.getElementById("pswd").value = paramValue;
-			document.getElementById("sbmt").click();
-		}
-	}
-	window.onload = doFill;
-</script>
+<meta name="apple-itunes-app" content="app-id=1409358123"/>
 </head>
 <body>
 Hello World!<br>
 <br>
-<input type="button" value="My Button" 
-onclick="location.href = 'https://tatianamrl.github.io/test2/'" />
+<input type="button" value="My Button" onclick="location.href = 'https://tatianamrl.github.io/test2/'" />
 <br>
 <br>
 <br>
-<form>
- 	<label  for="pswd">Enter your username: </label>
-    <input  type="text" id="usrn">
-    <br>
-    <label for="pswd">Enter your password: </label>
-    <input  type="password" id="pswd">
-    <br>
-    <input type="submit" id = "sbmt" value="Submit" onclick="checkPswd();" />
-</form>
-<script type="text/javascript">
-    function checkPswd() {
-        window.location = "https://tatianamrl.github.io/test2/";
-        var confirmPassword = "admin";
-        var password = document.getElementById("pswd").value;
-        if (password == confirmPassword) {
-             //window.location="welcome.html";
-
-        }
-        else{
-            //alert("Passwords do not match.");
-        }
-    }
-</script>
 </body>
 </html>
